@@ -2,8 +2,9 @@
   "name": "gumgumbot",
   "version": "1.0.0",
   "description": "Gum Gum Discord Bot",
-  "main": "app.js",
+  "main": "application.js",
   "scripts": {
+    "start": "node .\\src\\nl\\gumgum\\application.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,6 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const axios = require('axios');
-const { leagueAPI } = require('../config.json');
+const { leagueAPI } = require('../../../resource/config.json');
+
 let region = 'EUW1'
 let summonerName = ''
 
