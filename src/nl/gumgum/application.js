@@ -1,10 +1,10 @@
 const path = require('node:path');
 const fs = require('node:fs');
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const { Client, Collection, GatewayIntentBits} = require('discord.js');
 const { token } = require('../../resource/config.json');
 
 // Create Discord client
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 // Load and fire events
 const eventsPath = path.join(__dirname, 'events');
@@ -36,6 +36,9 @@ commandFiles.forEach(file => {
         console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property.`);
     }
 });
+
+
+
 
 // Start bot
 client.login(token);
